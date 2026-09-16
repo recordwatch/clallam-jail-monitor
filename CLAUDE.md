@@ -54,11 +54,9 @@ A public jail roster monitor for Clallam County, WA (Port Angeles). Polls the co
 ## Related projects
 - **Whatcom Jail Roster** — `../whatcom-jail-monitor`
 - **Grays Harbor Jail Roster** — `../grays-harbor-jail-monitor`
+- **Jefferson Jail Roster** — `../jefferson-jail-monitor` (same vendor, but a much more limited deployment — no history, no release dates; read its CLAUDE.md before assuming Clallam's scraper patterns transfer)
 - **Mason County Jail Roster** — `../mason-jail-roster` (also serves the wajaildata.org hub page)
-- **Washington Jail Data hub** — https://wajaildata.org — add a nav entry here once this site is live (see `mason-jail-roster/server.js`'s `.nav-section` block)
+- **Washington Jail Data hub** — https://wajaildata.org — nav entry added in `mason-jail-roster/server.js`'s `.nav-section` block
 
-## Setup steps still needed
-1. Create the GitHub repo and `git remote add origin` + push
-2. Enable GitHub Pages (Settings → Pages → deploy from `gh-pages` branch)
-3. Trigger the `scrape.yml` workflow once manually (`workflow_dispatch`) to confirm it runs end-to-end — watch for the first run being slow (~400 detail fetches vs. the steady-state ~100)
-4. Add the Clallam link to `mason-jail-roster/server.js`'s `.nav-section` (wajaildata.org hub)
+## Status
+Live at https://recordwatch.github.io/clallam-jail-monitor/. Repo created, Pages enabled, `scrape.yml` cron confirmed working end-to-end, wajaildata.org hub link added.
